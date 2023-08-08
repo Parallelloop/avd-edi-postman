@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "aa954bf8-1007-4a73-a65a-b3509042d495",
+		"name": "AVD EDI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7988551"
+	},
+	"item": [
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "get-inventory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/get-inventory?filters=[{\"field\":\"searchText\",\"value\":\"\"},{\"field\":\"categoryId\",\"value\":null},{\"field\":\"manufacturerId\",\"value\":null}]&perPage=20&pageNo=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-inventory"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"},{\"field\":\"categoryId\",\"value\":null},{\"field\":\"manufacturerId\",\"value\":null}]"
+								},
+								{
+									"key": "perPage",
+									"value": "20"
+								},
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manufacturers",
+			"item": [
+				{
+					"name": "get-all-manufacturers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/get-all-manufacturers?filters=[{\"field\":\"searchText\",\"value\":\"\"}]&perPage=20&pageNo=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-all-manufacturers"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]"
+								},
+								{
+									"key": "perPage",
+									"value": "20"
+								},
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-manufacturer-access",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"manufacturerIds\": [\n        15984\n    ],\n    \"isSelectAll\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/create-manufacturer-access",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"create-manufacturer-access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-manufacturer-access",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MG5Oc1FWRWxLTVQ0cjZxcDlKV2c6TGd6VWZ5WFAyd2NydENZSWxwUThaQTRGU2FNN2hHSDZvcUVEdmJkNQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"manufacturerIds\": [\n        15984\n    ],\n    \"isSelectAll\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/remove-manufacturer-access",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"remove-manufacturer-access"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase Invoices",
+			"item": [
+				{
+					"name": "get-purchase-invoices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/get-purchase-invoices?filters=[{\"field\":\"searchText\",\"value\":\"\"}]&perPage=20&pageNo=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-purchase-invoices"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]"
+								},
+								{
+									"key": "perPage",
+									"value": "20"
+								},
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "print-purchase-invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salesOrderId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/print-purchase-invoice",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"print-purchase-invoice"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales Orders",
+			"item": [
+				{
+					"name": "get-sales-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salesOrderNumber\": \"12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/get-sales-order",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-sales-order"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-sales-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {\n        \"requestedDeliveryDate\": \"2023-08-08\",\n        \"shipToName\": \"Nabeel\",\n        \"address1\": \"Lahore\",\n        \"address2\": \"Lahore\",\n        \"city\": \"Lahore\",\n        \"state\": \"Pakistan\",\n        \"country\": \"US\",\n        \"postalCode\": \"57000\",\n        \"phoneNo\": \"03000061423\"\n    },\n    \"items\": [\n        {\n            \"sku\": \"TKA3A034\",\n            \"quantity\": 10\n        },\n        {\n            \"sku\": \"TESTITEM\",\n            \"quantity\": 10\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/create-sales-order",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"create-sales-order"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-sales-orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YTVHcmdxRDFoWlVqb0kyM1FtUkE6OW42Z2F1Q3k3VExacDVNWXJxSlN6SEtVaDNCRlhzb3dQeGNsQVZiUQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/get-sales-orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get-sales-orders"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "[{\"field\":\"searchText\",\"value\":\"\"}]",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "20",
+									"disabled": true
+								},
+								{
+									"key": "pageNo",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
